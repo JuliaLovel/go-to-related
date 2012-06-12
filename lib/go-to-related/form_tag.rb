@@ -7,7 +7,7 @@ class ActionView::Helpers::FormBuilder
 
   def go_to_related_tag(method, options = {})
     options[:id] = field_id(method,options[:index])
-    return text_field_tag(field_name(method,options[:index]),options) 
+    return text_field_tag(field_name(method,options[:index]),options) + content_tag(:div, "test", :class => "btn go_to_related")
   end
 
   def field_name(label,index=nil)
